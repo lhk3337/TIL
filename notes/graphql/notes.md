@@ -35,6 +35,8 @@ mutation{
 
 ### resolver
 
+query는 DB에서 문제 같은 것이고, 이것을 해결 하기 위한 것이 resolve.
+
 ## Apollo
 
 - GraphQL을 구현할 솔루션, GraphQL은 명세, 형식임
