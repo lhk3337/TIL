@@ -48,3 +48,32 @@ query는 DB에서 문제 같은 것이고, 이것을 해결 하기 위한 것이
 - 간편하고 쉬운 설정과 풍성한 기능등을 제공
 - Apollo Server는 백엔드 서버 제작할때 사용
 - Apollo Client와 React를 이용하여 프론트 엔드 웹제작 가능
+  <br /><br />
+
+### Apollo Hooks을 이용한 GraphQL API 호출
+
+```javascript
+  import { useQuery, gql } from "@apollo/client";
+
+  const GET_MOVIES = gql`
+    {
+      movies {
+        title
+        id
+        medium_cover_image
+      }
+    }
+  `;
+
+  const Home = () => {
+    const { loading, error, data } = useQuery(GET_MOVIES); //loading:로딩 여부, error:오류 데이터 data:응답 데이터
+     if (loading) {
+      return "loading...";
+    }
+    if (error) {
+      return "error";
+    }
+    if (data && data.movies) {
+      return data.movies.map((m) => <h1>{m.title}</h1>);
+    }
+```
