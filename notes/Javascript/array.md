@@ -116,7 +116,7 @@ console.log(result3);
 
 ```javascript
 const arr = [1, 2, 3, 4, 5];
-if(arr.indexOf(1)){ // 0이 false라 else 실행
+if(arr.indexOf(1)){ // 1이 0번지여서 '1 찾았다'가 나올꺼 같지만, arr.indexOf(1)이 0이 되므로 if문 조건식에서 false(0)로 인식하여 else문을 실행함
     console.log('1 찾았다');
     else{
         console.log('1 못찾았다.')
@@ -125,6 +125,8 @@ if(arr.indexOf(1)){ // 0이 false라 else 실행
 <결과>
 1 못찾았다.
 ```
+
+그렇게 때문에 아래와 같이 조건을 붙여 주어야 한다.
 
 ```javascript
 const arr = [1, 2, 3, 4, 5];
