@@ -6,4 +6,4 @@
 |📝 메모|배운 것 외에 쓰고 싶은 내용 기록|
 
 
-## <a href=http://lhk3337.github.io/>블로그</a> 로 TIL 이동
+## <a href=http://lhk3337.github.io/>기술 블로그</a> 로 TIL 이동
